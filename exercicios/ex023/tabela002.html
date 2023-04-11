@@ -28,6 +28,17 @@
         td.num{
             text-align: right;
         }
+
+    caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+    }
+
+    tbody > tr:nth-child(2n){
+        background-color: lightgray;
+    }
     </style>
 </head>
 <body>
@@ -35,15 +46,17 @@
     <!--
         ANATOMIAS PARA TABELAS GRANDES
         TABLE
+        CAPTION= LEGENDA OU TITULO DA TABELA DA TABELA ( nao se usa td no caption)
           THEAD = TR,TD,TH
           TBODY = TR,TD,TH
           TFOOT = TR,TD,TH
     -->
     <table>
+        <caption>POPULAÇÃO DE UNIDADES FEDERATIVAS</caption>
         <thead>
             <tr>
-                <th>ESTADO</th>
-                <th>POPULAÇÃO</th>
+                <th scope="col">ESTADO</th>
+                <th scope="col" style="width: 50px;">POPULAÇÃO</th>
             </tr>
 
         </thead>
@@ -161,7 +174,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>TOTAL DE HABITANTES</th>
+                <th scope="row">TOTAL DE HABITANTES</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
 
